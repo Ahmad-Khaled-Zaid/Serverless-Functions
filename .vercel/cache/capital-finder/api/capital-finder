@@ -2,6 +2,7 @@ from http.server import BaseHTTPRequestHandler
 from urllib import parse
 import requests
 
+
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         s = self.path
@@ -23,13 +24,13 @@ class handler(BaseHTTPRequestHandler):
         else:
             message = "Please provide me with a word"
 
-
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
         self.wfile.write(message.encode())
 
         return
+
 # from http.server import BaseHTTPRequestHandler
 # import requests
 # from urllib import parse
@@ -51,7 +52,8 @@ class handler(BaseHTTPRequestHandler):
 #                 Capital = capital['capital'][0]
 #                 # definitions.append(definition)
 #
-#             message = str(Capital)
+#             # message = str(Capital)
+#             message = "str(Capital)"
 #
 #         else:
 #             message = "Please provide a correct country Name"

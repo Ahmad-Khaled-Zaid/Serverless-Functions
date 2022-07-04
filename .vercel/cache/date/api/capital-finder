@@ -19,7 +19,8 @@ class Capital(BaseHTTPRequestHandler):
                 Capital = capital['capital'][0]
                 # definitions.append(definition)
 
-            message = str(Capital)
+            # message = str(Capital)
+            message = "str(Capital)"
 
         else:
             message = "Please provide a correct country Name"
